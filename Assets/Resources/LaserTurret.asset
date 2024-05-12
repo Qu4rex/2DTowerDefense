@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6446b3a64c16c784798a6d25ea58be09, type: 3}
-  m_Name: Turret
+  m_Name: LaserTurret
   m_EditorClassIdentifier: 
-  _name: "\u041A\u0430\u043A\u0430\u043C\u0435\u0442"
+  _name: "\u041B\u0430\u0437\u0435\u0440\u043C\u0435\u0442"
   _icon: {fileID: 0}
-  _price: 50
-  _turretPrefab: {fileID: 3560751144819530561, guid: a8e752702822e494f8584c650ad2026f, type: 3}
+  _price: 100
+  _turretPrefab: {fileID: 3560751144819530561, guid: 52e7674d1b14657478eb44a484aeec1b, type: 3}

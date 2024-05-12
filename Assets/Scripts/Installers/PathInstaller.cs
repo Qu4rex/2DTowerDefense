@@ -5,6 +5,6 @@ public class PathInstaller : MonoInstaller
 {
     public override void InstallBindings()
     {
-        Container.Bind<Path>().FromComponentInHierarchy().AsSingle();
+        //Container.Bind<Path>().FromComponentInHierarchy().AsSingle();
     }
 }

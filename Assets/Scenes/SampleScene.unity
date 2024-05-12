@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222861530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 246e273576fa23c48afb4925b87f4b0f, type: 3}
   m_Name: 
@@ -4426,6 +4426,7 @@ MonoBehaviour:
   _shopRegion: {fileID: 766431075}
   _turretAsset:
   - {fileID: 11400000, guid: 1e9ee90604c794f4398a378cbc9fe341, type: 2}
+  - {fileID: 11400000, guid: 089daefe5fb7f924b8a36795ffad738d, type: 2}
   _itemPrefab: {fileID: 2342743722185131977, guid: 6b70d429a28f564479ad23cf5bded813, type: 3}
 --- !u!1 &565480213
 GameObject:
@@ -6691,7 +6692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 766431076}
   - component: {fileID: 766431078}
-  - component: {fileID: 766431077}
   - component: {fileID: 766431079}
   m_Layer: 5
   m_Name: ShopMenu
@@ -6720,36 +6720,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &766431077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766431075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &766431078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6779,7 +6749,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 150}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &773957118
@@ -12811,6 +12781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 4916587965237164714, guid: 1a2e1c9c52c49914b8788cbbbb56a3b6, type: 3}
   _spawnPoint: {fileID: 1409570540}
+  _path: {fileID: 1919198749}
 --- !u!1 &1459780413
 GameObject:
   m_ObjectHideFlags: 0

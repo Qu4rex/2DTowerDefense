@@ -7,12 +7,7 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] private Transform _spawnPoint;
 
-    private Path _path;
-
-    [Inject]
-    public void Construct(Path path) {
-        _path = path;
-    }
+    [SerializeField] private Path _path;
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Space)) {

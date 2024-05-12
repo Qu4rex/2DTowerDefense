@@ -3,13 +3,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Transform _target;
-    private int _damage;
+    private float _damage;
 
     [SerializeField] private float _speed = 5f;
 
     private Rigidbody2D _rb;
 
-    public void SetTarget(Transform target, int damage) {
+    public void SetTarget(Transform target, float damage) {
         _target = target;
         _damage = damage;
     }

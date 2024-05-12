@@ -25,12 +25,14 @@ public class Slot : MonoBehaviour
         _turret = Instantiate(turretAsset.TurretPrefab, transform.position, Quaternion.identity);
         _slotState = SlotState.Full;
         _isMouseEnabled = true;
+        _spriteRenderer.color = _startColor; 
     }
 
     public void DestroyTurret() {
         Destroy(_turret);
         _slotState = SlotState.Empty;
         _isMouseEnabled = true;
+        _spriteRenderer.color = _startColor;
     }
 
     private void Start() {
@@ -40,11 +42,15 @@ public class Slot : MonoBehaviour
     }
 
     private void OnMouseEnter() {
-        _spriteRenderer.color = _hovelColor;
+        if(_isMouseEnabled) {
+            _spriteRenderer.color = _hovelColor;
+        }
     }
 
     private void OnMouseExit() {
-        _spriteRenderer.color = _startColor;
+        if(_isMouseEnabled) {
+           _spriteRenderer.color = _startColor; 
+        }
     }
 
     private void OnMouseDown() {
