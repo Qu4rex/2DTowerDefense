@@ -5,11 +5,10 @@ public abstract class BaseTurret : MonoBehaviour
 {
     [SerializeField] private Transform _turretRotationPoint;
     [SerializeField] private LayerMask _enemyMask;
-    [SerializeField] protected Transform _shotPoint;
     protected Transform _target;
     
     [SerializeField] private float _targetingRange = 3f;    
-    [SerializeField] private float _rotationSpeed = 300f;
+    private float _rotationSpeed = 300f;
     [SerializeField] protected float _damage = 1;
 
     [SerializeField] protected float _shootingRate;

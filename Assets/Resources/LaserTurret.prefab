@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2626893847945228252}
   - component: {fileID: 8377171199970709753}
   m_Layer: 0
-  m_Name: shotPoint
+  m_Name: laserRendererPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,11 +186,10 @@ MonoBehaviour:
   _enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  _shotPoint: {fileID: 2626893847945228252}
   _targetingRange: 3
-  _rotationSpeed: 300
   _damage: 1
   _shootingRate: 0
+  _laserRenderer: {fileID: 8377171199970709753}
   _laserEffect: {fileID: 0}
 --- !u!1 &3599632352489933799
 GameObject:

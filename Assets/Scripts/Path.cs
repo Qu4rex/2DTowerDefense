@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Path : MonoBehaviour
 {   
-    [SerializeField] private Transform[] _wayPoints;
+    private Transform[] _wayPoints;
 
     public Transform GetWaypointByIndex(int index) => _wayPoints[index];
 
