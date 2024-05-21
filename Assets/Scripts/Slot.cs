@@ -9,16 +9,15 @@ public class Slot : MonoBehaviour
     [SerializeField] private Color _hovelColor;
     private Color _startColor;
     private SpriteRenderer _spriteRenderer;
-
-    private static bool _isMouseEnabled = true;
-
-    public static Action<Slot, TurretAsset> onSelected;
+    private TurretAsset _turretAsset;
+    private GameObject _turret;
 
     private SlotState _slotState;
     public SlotState SlotState { get { return _slotState; } }
 
-    private TurretAsset _turretAsset;
-    private GameObject _turret;
+    private static bool _isMouseEnabled = true;
+
+    public static Action<Slot, TurretAsset> onSelected;
 
     public void CreateTurret(TurretAsset turretAsset) {
         _turretAsset = turretAsset;
@@ -57,7 +56,6 @@ public class Slot : MonoBehaviour
         if(_isMouseEnabled) {
             _isMouseEnabled = false;
             onSelected?.Invoke(this, _turretAsset);
-            Debug.Log("OnDown: " + _isMouseEnabled);
         }
     }
 }

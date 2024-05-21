@@ -3,7 +3,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float _health = 5;
-
     //[SerializeField] private int _healthMax;
 
     public void TakeDamage(float damage) {

@@ -3,11 +3,10 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private int _speed;
+    private int _pathIndex = 1;
 
     private Rigidbody2D _rb;
     private Transform _target;
-    private int _pathIndex = 1;
-
     private Path _path;
 
     public void SetPath(Path path) {

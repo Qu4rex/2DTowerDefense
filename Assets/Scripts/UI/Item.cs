@@ -14,19 +14,32 @@ public class Item : MonoBehaviour
 
     public static Action<TurretAsset> onBought;
 
-    private void Start() {
-        _buyButton.onClick.AddListener(Buy);
-    }
-
-    public void CreateItem(TurretAsset turretAsset) {
+    private Wallet _wallet;
+    
+    public void SetItem(TurretAsset turretAsset, Wallet wallet) {
         _icon = turretAsset.Icon;
         _nameText.text = turretAsset.Name;
         _priceText.text = turretAsset.Price.ToString();
         _turretAsset = turretAsset;
+        _wallet = wallet;
+
+        _wallet.onChangedMoney += UpdateCondition;
+        UpdateCondition();
+    }
+
+    private void Start() {
+        _buyButton.onClick.AddListener(Buy);
     }
 
     private void Buy() {
-        // HERE BUY SYSTEM
+        _wallet.DecreaseMoney(_turretAsset.Price);
         onBought?.Invoke(_turretAsset);
+    }
+
+    private void UpdateCondition() {
+        if(_wallet.GetMoney >= _turretAsset.Price)
+            _buyButton.interactable = true;
+        else
+            _buyButton.interactable = false;
     }
 }

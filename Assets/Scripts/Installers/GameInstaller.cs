@@ -1,8 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using Zenject;
 
-public class GameInstaller : MonoBehaviour
+public class GameInstaller : MonoInstaller
 {
-    //
+    [SerializeField] private Wallet _wallet;
+
+
+    public override void InstallBindings()
+    {
+        Container.Bind<Wallet>().FromInstance(_wallet);
+
+        
+        // var calculator = SelectCalculator(_calculatorType);
+        // Container.Bind<IDamageCalculator>().FromInstance(calculator);
+
+    }
 }
